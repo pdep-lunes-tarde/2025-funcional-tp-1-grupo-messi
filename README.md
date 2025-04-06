@@ -2,11 +2,11 @@
 
 ## Grupo, nombre y legajo de integrantes
 
-- Nombre del grupo: **Completar**
+- Nombre del grupo: **Grupo Messi**
 
 Integrantes:
-- Legajo: **Completar** 
-- Nombre: **Completar**
+- Legajo: **2138815** 
+- Nombre: **Denise A Medina Mosquera**
 
 - Legajo: **Completar** 
 - Nombre: **Completar**

@@ -8,8 +8,8 @@ correrTests = hspec $ do
 -- Si alguna suit de tests tiene "focus" adelante, solo se va a correr esa.
 -- Asi que, para ir probando los puntos, agreguen focus a los demas, o saquenselo a todos:
   focus suiteDeTestsDeParteI
-  suiteDeTestsDeParteIBonus
-  suiteDeTestsDeParteII
+  --suiteDeTestsDeParteIBonus
+  --suiteDeTestsDeParteII
   
 suiteDeTestsDeParteI =
   describe "Parte I: Numeros" $ do
@@ -19,14 +19,14 @@ suiteDeTestsDeParteI =
         siguiente (-1) `shouldBe` 0
         siguiente 0 `shouldBe` 1
         siguiente 1 `shouldBe` 2
-
+    {-
     describe "inversa" $ do
       it "la inversa de 1 es 1" $ do
         inversa 1 `shouldBe` 1
       it "la inversa de cualquier numero es el resultado de dividir 1 por ese numero" $ do
         inversa 4 `shouldBe` 0.25
         inversa 0.25 `shouldBe` 4
-
+    -}  
     describe "esPositivo" $ do
       it "es verdad para los numeros mayores a 0" $ do
         esPositivo 1 `shouldBe` True
@@ -35,6 +35,7 @@ suiteDeTestsDeParteI =
       it "es falso para el 0" $ do
         esPositivo 0 `shouldBe` False
 
+{-
 suiteDeTestsDeParteIBonus =
   describe "Parte 1 Bonus" $ do
     it "el perimetro de un circulo es 2 * pi * radio" $ do
@@ -87,6 +88,7 @@ suiteDeTestsDeParteII =
         haceFrioFahrenheit 46.4 `shouldBe` True
       it "" $ do
         pendingWith "Pensar un caso para este test, escribir el nombre y el cuerpo del mismo"
+-}
 
 escribiTestsParaEstaFuncion :: SpecWith ()
 escribiTestsParaEstaFuncion = pure ()

@@ -4,14 +4,16 @@ import PdePreludat
 -- 1. Numeros
 
 siguiente :: Number -> Number
-siguiente = implementame
+siguiente numero = numero + 1
 
 esPositivo :: Number -> Bool
-esPositivo = implementame
+esPositivo numero = numero > 0
 
 -- escriban el tipo de esta función
-inversa n = implementame
+--inversa :: Number -> Number
+--inversa n = implementame
 
+{-
 -- 2. Temperaturas
 
 celsiusAFahrenheit :: Number -> Number
@@ -41,3 +43,4 @@ superficieCubo lado = implementame
 
 superficieCilindro :: Number -> Number -> Number
 superficieCilindro radio altura = implementame
+-}
