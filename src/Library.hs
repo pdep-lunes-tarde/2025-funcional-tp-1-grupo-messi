@@ -2,32 +2,30 @@ module Library where
 import PdePreludat
 
 -- 1. Numeros
-
 siguiente :: Number -> Number
-siguiente numero = numero + 1
+siguiente nro = nro + 1
 
 esPositivo :: Number -> Bool
-esPositivo numero = numero > 0
+esPositivo nro = nro > 0
 
--- escriban el tipo de esta función
---inversa :: Number -> Number
---inversa n = implementame
+inversa :: Number -> Number 
+inversa nro = 1 / nro
 
-{-
+-- 1.5 Bonus
+
 -- 2. Temperaturas
-
 celsiusAFahrenheit :: Number -> Number
-celsiusAFahrenheit celsius = implementame
+celsiusAFahrenheit celsius = (celsius * 1.8) + 32
 
 fahrenheitACelsius :: Number -> Number
-fahrenheitACelsius fahrenheit = implementame
+fahrenheitACelsius fahrenheit = (fahrenheit - 32) / 1.8
 
--- escriban el tipo de esta función
-haceFrioCelsius grados = implementame
+haceFrioCelsius :: Number -> Bool
+haceFrioCelsius grados = grados <= 8
 
--- escriban el tipo de esta función
-haceFrioFahrenheit grados = implementame
-
+haceFrioFahrenheit :: Number -> Bool
+haceFrioFahrenheit grados = grados <= (celsiusAFahrenheit 8)
+{-
 -- 2.5 Bonus OPCIONAL
 perimetroCirculo :: Number -> Number
 perimetroCirculo radio = implementame
