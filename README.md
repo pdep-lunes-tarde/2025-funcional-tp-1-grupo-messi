@@ -8,8 +8,8 @@ Integrantes:
 - Legajo: **2138815** 
 - Nombre: **Denise A Medina Mosquera**
 
-- Legajo: **Completar** 
-- Nombre: **Completar**
+- Legajo: **2183675** 
+- Nombre: **Francisco Saizar**
 
 
 ## Objetivos
