@@ -12,6 +12,20 @@ inversa :: Number -> Number
 inversa nro = 1 / nro
 
 -- 1.5 Bonus
+perimetroCirculo :: Number -> Number
+perimetroCirculo radio = 2 * radio * pi
+
+perimetroCuadrado :: Number -> Number
+perimetroCuadrado lado = lado * 4
+
+superficieCuadrado :: Number -> Number
+superficieCuadrado lado = lado * lado
+
+superficieCubo :: Number -> Number
+superficieCubo lado = 6 *lado * lado
+
+superficieCilindro :: Number -> Number -> Number
+superficieCilindro radio altura = pi * radio * radio * altura 
 
 perimetroCirculo :: Number -> Number
 perimetroCirculo radio = 2 * radio * pi
@@ -42,20 +56,3 @@ haceFrioCelsius grados = grados <= 8
 
 haceFrioFahrenheit :: Number -> Bool
 haceFrioFahrenheit grados = grados <= (celsiusAFahrenheit 8)
-{-
--- 2.5 Bonus OPCIONAL
-perimetroCirculo :: Number -> Number
-perimetroCirculo radio = implementame
-
-perimetroCuadrado :: Number -> Number
-perimetroCuadrado lado = implementame
-
-superficieCuadrado :: Number -> Number
-superficieCuadrado lado = implementame
-
-superficieCubo :: Number -> Number
-superficieCubo lado = implementame
-
-superficieCilindro :: Number -> Number -> Number
-superficieCilindro radio altura = implementame
--}
