@@ -2,42 +2,57 @@ module Library where
 import PdePreludat
 
 -- 1. Numeros
-
 siguiente :: Number -> Number
-siguiente = implementame
+siguiente nro = nro + 1
 
 esPositivo :: Number -> Bool
-esPositivo = implementame
+esPositivo nro = nro > 0
 
--- escriban el tipo de esta función
-inversa n = implementame
+inversa :: Number -> Number 
+inversa nro = 1 / nro
 
--- 2. Temperaturas
-
-celsiusAFahrenheit :: Number -> Number
-celsiusAFahrenheit celsius = implementame
-
-fahrenheitACelsius :: Number -> Number
-fahrenheitACelsius fahrenheit = implementame
-
--- escriban el tipo de esta función
-haceFrioCelsius grados = implementame
-
--- escriban el tipo de esta función
-haceFrioFahrenheit grados = implementame
-
--- 2.5 Bonus OPCIONAL
+-- 1.5 Bonus
 perimetroCirculo :: Number -> Number
-perimetroCirculo radio = implementame
+perimetroCirculo radio = 2 * radio * pi
 
 perimetroCuadrado :: Number -> Number
-perimetroCuadrado lado = implementame
+perimetroCuadrado lado = lado * 4
 
 superficieCuadrado :: Number -> Number
-superficieCuadrado lado = implementame
+superficieCuadrado lado = lado * lado
 
 superficieCubo :: Number -> Number
-superficieCubo lado = implementame
+superficieCubo lado = 6 *lado * lado
 
 superficieCilindro :: Number -> Number -> Number
-superficieCilindro radio altura = implementame
+superficieCilindro radio altura = pi * radio * radio * altura 
+
+perimetroCirculo :: Number -> Number
+perimetroCirculo radio = 2 * radio * pi
+
+perimetroCuadrado :: Number -> Number
+perimetroCuadrado lado = lado * 4
+
+superficieCuadrado :: Number -> Number
+superficieCuadrado lado = lado * lado
+
+superficieCubo :: Number -> Number
+superficieCubo lado = 6 *lado * lado
+
+superficieCilindro :: Number -> Number -> Number
+superficieCilindro radio altura = pi * radio * radio * altura 
+
+
+
+-- 2. Temperaturas
+celsiusAFahrenheit :: Number -> Number
+celsiusAFahrenheit celsius = (celsius * 1.8) + 32
+
+fahrenheitACelsius :: Number -> Number
+fahrenheitACelsius fahrenheit = (fahrenheit - 32) / 1.8
+
+haceFrioCelsius :: Number -> Bool
+haceFrioCelsius grados = grados <= 8
+
+haceFrioFahrenheit :: Number -> Bool
+haceFrioFahrenheit grados = grados <= (celsiusAFahrenheit 8)
