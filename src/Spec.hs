@@ -8,7 +8,7 @@ correrTests = hspec $ do
 -- Si alguna suit de tests tiene "focus" adelante, solo se va a correr esa.
 -- Asi que, para ir probando los puntos, agreguen focus a los demas, o saquenselo a todos:
   suiteDeTestsDeParteI
-  --suiteDeTestsDeParteIBonus
+  suiteDeTestsDeParteIBonus
   focus suiteDeTestsDeParteII
   
 suiteDeTestsDeParteI =
@@ -35,7 +35,6 @@ suiteDeTestsDeParteI =
       it "es falso para el 0" $ do
         esPositivo 0 `shouldBe` False
 
-{-
 suiteDeTestsDeParteIBonus =
   describe "Parte 1 Bonus" $ do
     it "el perimetro de un circulo es 2 * pi * radio" $ do
@@ -48,7 +47,6 @@ suiteDeTestsDeParteIBonus =
       superficieCubo 3 `shouldBe` 54
     it "la superficie de un cilindro es el area de las tapas por el area de la pared del cilindro" $ do
       superficieCilindro 2 4 `shouldBeEqualUpTo2Decimals` 75.39822
--}
 
 suiteDeTestsDeParteII =
   describe "Parte 2: Temperaturas" $ do
@@ -67,13 +65,13 @@ suiteDeTestsDeParteII =
       it "-10°F son -23,33°C" $ do
         celsiusAFahrenheit (-23.33) `shouldBeEqualUpTo2Decimals` (-10)
         fahrenheitACelsius (-10) `shouldBeEqualUpTo2Decimals` (-23.33)
-    {-
+    
     describe "fahrenheitACelsius y celsiusAFahrenheit son inversas" $ do
-      it "convertir un valor en celsius a fahrenheit y luego volver a convertir a celsius retorna el valor original" $ do
-        pendingWith "Escriban el cuerpo de un test en el que se chequee que si convierto un numero a fahrenheit y luego convierto el resultado a celsius obtengo el valor original"
-      it "convertir un valor en fahrenheit a celsius y luego volver a convertir a fahrenheit retorna el valor original" $ do
-        pendingWith "Lo mismo que el test anterior pero al reves"
-    -} 
+      it "Convertir un valor en celsius a fahrenheit y luego volver a convertir a celsius retorna el valor original" $ do
+        fahrenheitACelsius(celsiusAFahrenheit 24) `shouldBeEqualUpTo2Decimals` 24
+      it "Convertir un valor en fahrenheit a celsius y luego volver a convertir a fahrenheit retorna el valor original" $ do
+        celsiusAFahrenheit(fahrenheitACelsius 23) `shouldBeEqualUpTo2Decimals` 23
+    
     describe "haceFrioCelsius" $ do
       it "Cuando la temperatura es menos de 8°C es verdadero" $ do
         haceFrioCelsius (-5) `shouldBe` True
